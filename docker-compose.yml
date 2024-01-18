@@ -1,0 +1,13 @@
+version: "3.7"
+
+services:
+  redis:
+    container_name: scrapper-redis
+    image: redis/redis-stack
+    ports:
+      - 6379:6379
+  chroma:
+    container_name: scrapper-chroma
+    image: chromadb/chroma
+    ports:
+      - 8000:8000

@@ -1,0 +1,23 @@
+{
+	"scripts": {
+		"load": "npx tsc && node dist/load.js",
+		"load-dev": "tsc-watch --onsuccess \"node dist/load.js\""
+	},
+	"devDependencies": {
+		"@types/html-to-text": "^9.0.4",
+		"@types/node": "^20.11.3",
+		"typescript": "^5.3.3"
+	},
+	"dependencies": {
+		"@huggingface/inference": "2",
+		"@langchain/community": "^0.0.17",
+		"@langchain/core": "^0.1.15",
+		"@langchain/openai": "^0.0.12",
+		"axios": "^1.6.5",
+		"chromadb": "^1.7.3",
+		"dotenv": "^16.3.1",
+		"fast-xml-parser": "^4.3.3",
+		"html-to-text": "^9.0.5",
+		"langchain": "^0.1.3"
+	}
+}
