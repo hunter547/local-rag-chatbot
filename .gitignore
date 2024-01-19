@@ -3,3 +3,7 @@ node_modules
 .DS_Store
 full_docs
 .env
+__pycache__
+.venv
+parent_docs
+split_parent_docs
