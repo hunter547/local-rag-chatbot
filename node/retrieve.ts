@@ -1,7 +1,7 @@
 import { LocalFileStore } from "langchain/storage/file_system";
 import { RecursiveCharacterTextSplitter } from "langchain/text_splitter";
 import { Chroma } from "@langchain/community/vectorstores/chroma";
-import { CHROMA_DB_CONFIG, HF_EMBEDDINGS, OPEN_AI_MODEL } from "./config";
+import { CHROMA_DB_CONFIG, HF_EMBEDDINGS, OPEN_AI_MODEL } from "./node/config";
 import { ScoreThresholdRetriever } from "langchain/retrievers/score_threshold";
 import { ParentDocumentRetriever } from "langchain/retrievers/parent_document";
 import { createDocumentStoreFromByteStore } from "langchain/storage/encoder_backed";

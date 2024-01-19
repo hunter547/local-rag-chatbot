@@ -1,8 +1,11 @@
 import requests
 import xml.etree.ElementTree as ET
 from bs4 import BeautifulSoup
-from langchain.schema.document import Document
-from config import get_parent_document_retriever
+from langchain.embeddings.fastembed import FastEmbedEmbeddings
+from langchain.retrievers import ParentDocumentRetriever
+from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain.vectorstores import Chroma
+import uuid
 
 
 def parse_sitemap() -> list[str]:
@@ -46,14 +49,8 @@ def scrape_text_from_url(url: str) -> str:
 
 def main():
     urls = parse_sitemap()
-    parent_document_retriever = get_parent_document_retriever()
-
-    for url in urls:
-        page_content = scrape_text_from_url(url)
-        documents = [Document(page_content=page_content, metadata={"url": url})]
-        print(f"Creating a document for {url}")
-        parent_document_retriever.add_documents(documents)
-    print("Done.")
+    parent_splitter = RecursiveCharacterTextSplitter(chunk_size=1000)
+    child_splitter = RecursiveCharacterTextSplitter(chunk_size=400)
 
 
 if __name__ == "__main__":

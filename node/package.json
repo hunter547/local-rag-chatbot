@@ -1,7 +1,7 @@
 {
 	"scripts": {
-		"load": "npx tsc && node dist/load.js",
-		"load-dev": "tsc-watch --onsuccess \"node dist/load.js\""
+		"load": "ts-node load.ts",
+		"load-dev": "tsc-watch --onsuccess \"ts-node load.ts"
 	},
 	"devDependencies": {
 		"@types/html-to-text": "^9.0.4",

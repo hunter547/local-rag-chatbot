@@ -3,7 +3,9 @@ import { RetrievalQAChain } from "langchain/chains";
 import { HuggingFaceInferenceEmbeddings } from "@langchain/community/embeddings/hf";
 import { ChromaLibArgs } from "langchain/dist/vectorstores/chroma";
 import dotenv from "dotenv";
-dotenv.config();
+dotenv.config({
+	path: "../.env",
+});
 
 export const HF_EMBEDDINGS = new HuggingFaceInferenceEmbeddings();
 
