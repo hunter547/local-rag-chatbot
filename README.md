@@ -6,7 +6,11 @@
 
 Insure [Docker Desktop](https://docs.docker.com/desktop/) is installed on your machine
 Then run:
-`docker compose up -d`
+
+```
+docker compose up -d
+```
+
 This will get a [ChromaDB](https://docs.trychroma.com) instance up and running so that documents for later retrieval can be stored
 
 ### Environment Variables
@@ -34,7 +38,10 @@ yarn install
 ### Node.js load process
 
 After dependecies are installed, the load process can be started. This will scrap text from the web and load them as documents, with the urls, in the running ChromaDB container. To start the load process:
-`yarn load`
+
+```
+yarn load
+```
 
 ## Python Implementation
 
@@ -53,10 +60,17 @@ pip install -r requirements.txt
 ### Python load process
 
 After dependecies are installed, the load process can be started. This will scrap text from the web and load them as documents, with the urls, in the running ChromaDB container. To start the load process:
-`python load.py`
+
+```
+python load.py
+```
 
 ### Python retrieval process
 
 After all documents are loaded, the question and retrieval process is ready to begin. We will be running a streamlit app to have a UI for interacting with the LLM:
-`streamlit run app.py`
+
+```
+streamlit run app.py
+```
+
 Go to the localhost url provided in the terminal and start asking questions!

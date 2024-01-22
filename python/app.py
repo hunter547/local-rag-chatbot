@@ -6,7 +6,7 @@ from langchain.callbacks.streaming_stdout import StreamingStdOutCallbackHandler
 import streamlit as st
 
 PATH = (
-    "C:/Users/Hunter/AppData/Local/nomic.ai/GPT4All/mistral-7b-instruct-v0.1.Q4_0.gguf"
+    "/Users/h.evanoff/Library/Application Support/nomic.ai/GPT4All/mistral-7b-openorca.Q4_0.gguf"
 )
 callbacks = [StreamingStdOutCallbackHandler()]
 llm = GPT4All(model=PATH, callbacks=callbacks, verbose=True)

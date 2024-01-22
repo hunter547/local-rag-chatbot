@@ -1,23 +1,28 @@
 {
-	"scripts": {
-		"load": "ts-node load.ts",
-		"load-dev": "tsc-watch --onsuccess \"ts-node load.ts"
-	},
-	"devDependencies": {
-		"@types/html-to-text": "^9.0.4",
-		"@types/node": "^20.11.3",
-		"typescript": "^5.3.3"
-	},
-	"dependencies": {
-		"@huggingface/inference": "2",
-		"@langchain/community": "^0.0.17",
-		"@langchain/core": "^0.1.15",
-		"@langchain/openai": "^0.0.12",
-		"axios": "^1.6.5",
-		"chromadb": "^1.7.3",
-		"dotenv": "^16.3.1",
-		"fast-xml-parser": "^4.3.3",
-		"html-to-text": "^9.0.5",
-		"langchain": "^0.1.3"
-	}
+  "scripts": {
+    "load": "ts-node load.ts",
+    "load-dev": "tsc-watch --onsuccess \"ts-node load.ts",
+    "retrieve": "ts-node retrieve.ts",
+    "retrieve-dev": "tsc-watch --onsuccess \"ts-node retrieve.ts"
+  },
+  "devDependencies": {
+    "@types/html-to-text": "^9.0.4",
+    "@types/node": "^20.11.3",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@backroad/backroad": "^1.3.2",
+    "@huggingface/inference": "2",
+    "@langchain/community": "^0.0.17",
+    "@langchain/core": "^0.1.15",
+    "@langchain/openai": "^0.0.12",
+    "axios": "^1.6.5",
+    "chromadb": "^1.7.3",
+    "dotenv": "^16.3.1",
+    "fast-xml-parser": "^4.3.3",
+    "gpt4all": "^2.2.0",
+    "html-to-text": "^9.0.5",
+    "langchain": "^0.1.3",
+    "ts-node": "^10.9.2"
+  }
 }
